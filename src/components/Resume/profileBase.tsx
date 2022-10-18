@@ -26,11 +26,11 @@ export const ProfileBase: React.FC = () => {
         <img src="me.jpg" alt="profile" />
       </Flex>
       <Flex id="profileBaseContent">
-        <Text text={fullName} fontWeight="bold" />
-        <Text text={region} />
-        <Text text={phoneNumber} />
-        <Text text={userInfo.Email} />
-        <Text text={others} />
+        <Text id="fullName" text={fullName} fontWeight="bold" />
+        <Text id="region" text={region} />
+        <Text id="phoneNumber" text={phoneNumber} />
+        <Text id="email" text={userInfo.Email} />
+        <Text id="others" text={others} />
       </Flex>
     </ProfileBaseStyle>
   )

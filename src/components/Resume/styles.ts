@@ -14,14 +14,14 @@ export const ProfileBaseStyle = styled.div`
     justify-content: start;
 
     img {
-      height: max(12vw, 110px);
+      height: max(13vw, 130px);
       border-radius: 50%;
       max-height: 250px;
+      margin: 0 10px 0 0;
     }
   }
 
   #profileBaseContent {
-    padding-top: 10px;
     justify-content: start;
 
     p {
@@ -34,7 +34,6 @@ export const ProfileBaseStyle = styled.div`
     height: 170px;
     padding: 10px;
     align-items: center;
-    justify-content: center;
     flex-direction: row;
     border: none;
     border-bottom: 2px solid ${props => props.theme.colors.background};
@@ -64,9 +63,17 @@ export const ProfileBaseStyle = styled.div`
   @media (max-width: 864px) {
     #profileBaseContent {
       flex-flow: column;
+      justify-content: center;
+      align-items: center;
+
+      #email,
+      #others {
+        display: none;
+      }
+
       p {
-        font-size: 20px;
-        width: 90%;
+        font-size: 18px;
+        width: auto;
         padding: 0;
         text-align: left;
       }
