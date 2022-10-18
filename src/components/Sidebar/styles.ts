@@ -22,6 +22,46 @@ export const SidebarStyle = styled.div`
   #sidebar-buttons {
     justify-content: space-between;
     flex-direction: column;
+
+    #sidebar-buttons-page {
+      justify-content: start;
+      height: auto;
+    }
+
+    #sidebar-buttons-toggle {
+      justify-content: end;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 700px) {
+    height: 50px;
+    width: 100%;
+    box-shadow: 4px 6px 5px -2px rgba(0, 0, 0, 0.2);
+
+    #sidebar-buttons {
+      justify-content: space-between;
+      flex-direction: row;
+
+      #sidebar-buttons-page {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      #sidebar-buttons-toggle {
+        flex-direction: row;
+        width: auto;
+      }
+    }
+
+    &:hover {
+      width: unset;
+
+      #sidebarItemText {
+        width: 0;
+        margin: 0;
+      }
+    }
   }
 `
 
@@ -45,5 +85,14 @@ export const SidebarItemStyle = styled.div`
   #sidebarItemText {
     width: 0;
     overflow: hidden;
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
+
+    #sidebarItem {
+      width: 100%;
+      justify-content: center;
+    }
   }
 `

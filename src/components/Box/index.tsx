@@ -6,4 +6,8 @@ export const Box = styled.div`
   height: 100vh;
   width: 100vw;
   display: flex;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
 `

@@ -20,7 +20,7 @@ export const Sidebar: React.FC = () => {
   return (
     <SidebarStyle>
       <Flex id="sidebar-buttons">
-        <Flex style={{ justifyContent: 'start', height: 'auto' }}>
+        <Flex id="sidebar-buttons-page">
           <SidebarItem
             text={content.sideBar.about}
             icon={<AiOutlineUser size={'30px'} color={theme.colors.text} />}
@@ -37,7 +37,7 @@ export const Sidebar: React.FC = () => {
             onClick={() => navigate('experience', { replace: true })}
           />
         </Flex>
-        <Flex style={{ justifyContent: 'end', height: 'auto' }}>
+        <Flex id="sidebar-buttons-toggle">
           <SidebarItem
             text={language === 'en' ? 'English' : 'Português'}
             icon={
