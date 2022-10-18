@@ -13,7 +13,7 @@ const TextComponent: React.FC<Props> = props => {
   return (
     <TextStyle
       id={props.id}
-      fontSize={props.fontSize || 20}
+      fontSize={props.fontSize}
       fontWeight={props.fontWeight}
       className={props.class}
       style={props.style}

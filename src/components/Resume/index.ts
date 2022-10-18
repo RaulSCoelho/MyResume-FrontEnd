@@ -2,7 +2,7 @@ import { FlexStyle } from 'components/Flex/styles'
 import styled from 'styled-components'
 
 export const ResumeWrap = styled(FlexStyle)`
-  @media (max-width: 700px) {
+  @media (max-width: 724px) {
     height: calc(100% - 50px);
   }
 `
@@ -53,7 +53,7 @@ export const ResumeStyle = styled.div`
     }
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 724px) {
     width: 100%;
     height: 100%;
   }

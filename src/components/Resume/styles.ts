@@ -50,31 +50,12 @@ export const ProfileBaseStyle = styled.div`
     }
 
     #profileBaseContent {
-      flex-flow: column wrap;
-      p {
-        font-size: 18px;
-        width: 50%;
-        padding: 0 10px;
-        text-align: left;
-      }
-    }
-  }
-
-  @media (max-width: 864px) {
-    #profileBaseContent {
-      flex-flow: column;
       justify-content: center;
-      align-items: center;
-
-      #email,
-      #others {
-        display: none;
-      }
 
       p {
-        font-size: 18px;
-        width: auto;
-        padding: 0;
+        font-size: min(max(1.5vw, 13pt), 15px);
+        width: 100%;
+        margin: 3px 0;
         text-align: left;
       }
     }

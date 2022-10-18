@@ -34,7 +34,7 @@ export const SidebarStyle = styled.div`
     }
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 724px) {
     height: 50px;
     width: 100%;
     box-shadow: 4px 6px 5px -2px rgba(0, 0, 0, 0.2);
@@ -87,7 +87,7 @@ export const SidebarItemStyle = styled.div`
     overflow: hidden;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 724px) {
     width: 100%;
 
     #sidebarItem {
