@@ -23,6 +23,7 @@ export const About: React.FC = () => {
             />
             <br />
             <Text text={content.about.me.content} />
+            <br />
           </Flex>
           <Flex className="content subContent">
             <Text
@@ -48,7 +49,6 @@ export const About: React.FC = () => {
               fontSize={25}
               fontWeight="bold"
             />
-            <br />
             <Flex id="socialMedias">
               {content.about.contact.socialMedias.map(socialMedia => (
                 <SocialMedia

@@ -14,7 +14,7 @@ export const ProfileBaseStyle = styled.div`
     justify-content: start;
 
     img {
-      height: max(14vw, 130px);
+      height: max(13vw, 130px);
       border-radius: 50%;
       max-height: 250px;
     }
@@ -26,6 +26,50 @@ export const ProfileBaseStyle = styled.div`
 
     p {
       margin: 10px 0;
+    }
+  }
+
+  @media (max-width: 1110px) {
+    width: 100%;
+    height: 164px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border: none;
+    border-bottom: 2px solid ${props => props.theme.colors.background};
+    overflow: hidden;
+
+    #profilePic,
+    #profileBaseContent {
+      margin: 0;
+      padding: 0;
+    }
+
+    #profilePic {
+      width: auto;
+    }
+
+    #profileBaseContent {
+      flex-flow: column wrap;
+      p {
+        font-size: 18px;
+        width: 50%;
+        padding: 0 10px;
+        text-align: left;
+      }
+    }
+  }
+
+  @media (max-width: 864px) {
+    #profileBaseContent {
+      flex-flow: column;
+      p {
+        font-size: 20px;
+        width: 100%;
+        padding: 0 10px;
+        text-align: left;
+      }
     }
   }
 `

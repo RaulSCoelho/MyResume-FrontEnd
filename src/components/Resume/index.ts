@@ -32,4 +32,17 @@ export const ResumeStyle = styled.div`
     flex-flow: wrap;
     padding: 20px 0;
   }
+
+  @media (max-width: 1110px) {
+    flex-direction: column;
+
+    .main {
+      overflow: auto;
+    }
+
+    .content {
+      width: 100%;
+      height: 80%;
+    }
+  }
 `
