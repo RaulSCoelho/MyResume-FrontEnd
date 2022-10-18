@@ -19,8 +19,7 @@ export const SocialMediaStyle = styled(FlexStyle)`
   }
 
   @media (max-width: 500px) {
-    p {
-      font-size: 16px;
-    }
+    width: 50%;
+    height: auto;
   }
 `

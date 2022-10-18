@@ -10,4 +10,9 @@ export const SkillStyle = styled(FlexStyle)`
     box-shadow: 4px 6px 5px -2px rgba(0, 0, 0, 0.2);
     border-radius: 0.25rem;
   }
+
+  @media (max-width: 500px) {
+    width: 50%;
+    height: auto;
+  }
 `
