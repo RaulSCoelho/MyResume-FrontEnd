@@ -31,7 +31,7 @@ export const ProfileBaseStyle = styled.div`
 
   @media (max-width: 1110px) {
     width: 100%;
-    height: 164px;
+    height: 170px;
     padding: 10px;
     align-items: center;
     justify-content: center;
