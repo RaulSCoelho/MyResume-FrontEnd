@@ -40,7 +40,7 @@ export const ResumeStyle = styled.div`
     padding: 20px 0;
   }
 
-  @media (max-width: 1110px) {
+  @media (max-width: 1140px) {
     flex-direction: column;
 
     .main {

@@ -29,7 +29,7 @@ export const ProfileBaseStyle = styled.div`
     }
   }
 
-  @media (max-width: 1110px) {
+  @media (max-width: 1140px) {
     width: 100%;
     height: 170px;
     padding: 10px;
