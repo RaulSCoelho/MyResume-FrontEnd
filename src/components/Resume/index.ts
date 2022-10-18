@@ -45,4 +45,10 @@ export const ResumeStyle = styled.div`
       height: 80%;
     }
   }
+
+  @media (max-width: 700px) {
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid ${props => props.theme.colors.background};
+  }
 `
