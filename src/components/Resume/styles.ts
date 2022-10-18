@@ -14,7 +14,7 @@ export const ProfileBaseStyle = styled.div`
     justify-content: start;
 
     img {
-      height: max(13vw, 130px);
+      height: max(12vw, 110px);
       border-radius: 50%;
       max-height: 250px;
     }
@@ -66,8 +66,8 @@ export const ProfileBaseStyle = styled.div`
       flex-flow: column;
       p {
         font-size: 20px;
-        width: 100%;
-        padding: 0 10px;
+        width: 90%;
+        padding: 0;
         text-align: left;
       }
     }

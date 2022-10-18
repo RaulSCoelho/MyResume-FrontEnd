@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 
 import { Flex } from 'components/Flex'
-import { ResumeStyle } from 'components/Resume'
+import { ResumeStyle, ResumeWrap } from 'components/Resume'
 import { ProfileBase } from 'components/Resume/profileBase'
 import { SocialMedia } from 'components/SocialMedias/SocialMedia'
 import { Text } from 'components/Text'
@@ -11,7 +11,7 @@ export const About: React.FC = () => {
   const { content } = useContext(TranslationContext)
 
   return (
-    <Flex>
+    <ResumeWrap>
       <ResumeStyle>
         <ProfileBase />
         <Flex className="content main">
@@ -61,6 +61,6 @@ export const About: React.FC = () => {
           </Flex>
         </Flex>
       </ResumeStyle>
-    </Flex>
+    </ResumeWrap>
   )
 }

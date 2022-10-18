@@ -12,7 +12,7 @@ interface Props {
 
 export const SocialMedia: React.FC<Props> = props => {
   return (
-    <SocialMediaStyle width="33.33%">
+    <SocialMediaStyle>
       <a href={props.link} target="_blank" rel="noopener noreferrer">
         <Flex id="socialMediaBg">
           <Text text={props.name} style={{ padding: '5px' }} />
