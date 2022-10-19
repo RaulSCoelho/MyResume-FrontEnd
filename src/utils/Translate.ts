@@ -16,10 +16,10 @@ export async function Translate(
     text,
   }
 
-  // const url =
-  //   'https://script.google.com/macros/s/AKfycbyIvIhlEIijO0sJMXIUCc28p-Jt6aBJj_IBS2zUrwvrcQ_wZHf0KFJGMYlJeJd98U4I/exec' //principal
   const url =
-    'https://script.google.com/macros/s/AKfycbxHkOZcIlHCWeoghxtILeq9q_WI2xUBioDaxMkBkBuTKkYaXzCAsMPO_7tdtUncwDxk6w/exec' // secundaria
+    'https://script.google.com/macros/s/AKfycbyIvIhlEIijO0sJMXIUCc28p-Jt6aBJj_IBS2zUrwvrcQ_wZHf0KFJGMYlJeJd98U4I/exec' // principal
+  // const url =
+  //   'https://script.google.com/macros/s/AKfycbxHkOZcIlHCWeoghxtILeq9q_WI2xUBioDaxMkBkBuTKkYaXzCAsMPO_7tdtUncwDxk6w/exec' // secundaria
 
   try {
     return await FETCH.post<Response>({
