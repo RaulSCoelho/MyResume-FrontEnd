@@ -150,7 +150,9 @@ export const TranslationProvider: React.FC<Props> = ({ children }) => {
       return translatedContents
     }
     const content = translateContent()
-    setPtBrContents(content)
+    setTimeout(() => {
+      setPtBrContents(content)
+    }, 2000)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
