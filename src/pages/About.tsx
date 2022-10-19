@@ -34,8 +34,8 @@ export const About: React.FC = () => {
             <br />
             <ul style={{ width: '85%', paddingLeft: '30px' }}>
               {content.about.qualifications.qualificationsList.map(
-                qualification => (
-                  <li key={qualification.id}>
+                (qualification, i) => (
+                  <li key={i}>
                     <Text text={qualification.Qualification} />
                     <br />
                   </li>
@@ -50,11 +50,11 @@ export const About: React.FC = () => {
               fontWeight="bold"
             />
             <Flex id="socialMedias">
-              {content.about.contact.socialMedias.map(socialMedia => (
+              {content.about.contact.socialMedias.map((socialMedia, i) => (
                 <SocialMedia
                   name={socialMedia.Name}
                   link={socialMedia.Link}
-                  key={socialMedia.id}
+                  key={i}
                 />
               ))}
             </Flex>

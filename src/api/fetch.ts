@@ -1,12 +1,6 @@
-interface FetchProps {
-  method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
-  url: string
-  payload?: Object
-  includeCredentials?: boolean
-  token?: string
-}
+import { FetchNoPayload, FetchProps, FetchWithPayload } from 'interfaces/fetch'
 
-function fetchData<T>(props: FetchProps): Promise<T> {
+const fetchData = async <T>(props: FetchProps): Promise<T> => {
   if (!props.method) props.method = 'GET'
   if (props.includeCredentials === undefined) props.includeCredentials = true
 
@@ -34,25 +28,12 @@ function fetchData<T>(props: FetchProps): Promise<T> {
     }
   }
 
-  return fetch(props.url, options)
+  return await fetch(props.url, options)
     .then(res => res.json())
     .then(data => data)
 }
 
-interface FetchNoPayload {
-  url: string
-  includeCredentials?: boolean
-  token?: string
-}
-
-interface FetchWithPayload {
-  url: string
-  payload: Object
-  includeCredentials?: boolean
-  token?: string
-}
-
-async function GET<T>(props: FetchNoPayload): Promise<T> {
+const GET = async <T>(props: FetchNoPayload): Promise<T> => {
   const fetchProps: FetchProps = {
     url: props.url,
     includeCredentials: props.includeCredentials,
@@ -63,7 +44,7 @@ async function GET<T>(props: FetchNoPayload): Promise<T> {
   return await fetchData(fetchProps)
 }
 
-async function POST<T>(props: FetchWithPayload): Promise<T> {
+const POST = async <T>(props: FetchWithPayload): Promise<T> => {
   const fetchProps: FetchProps = {
     method: 'POST',
     url: props.url,
@@ -76,7 +57,7 @@ async function POST<T>(props: FetchWithPayload): Promise<T> {
   return await fetchData<T>(fetchProps)
 }
 
-async function PUT<T>(props: FetchWithPayload): Promise<T> {
+const PUT = async <T>(props: FetchWithPayload): Promise<T> => {
   const fetchProps: FetchProps = {
     method: 'PUT',
     url: props.url,
@@ -89,7 +70,7 @@ async function PUT<T>(props: FetchWithPayload): Promise<T> {
   return await fetchData<T>(fetchProps)
 }
 
-async function PATCH<T>(props: FetchWithPayload): Promise<T> {
+const PATCH = async <T>(props: FetchWithPayload): Promise<T> => {
   const fetchProps: FetchProps = {
     method: 'POST',
     url: props.url,
@@ -102,7 +83,7 @@ async function PATCH<T>(props: FetchWithPayload): Promise<T> {
   return await fetchData(fetchProps)
 }
 
-async function DELETE<T>(props: FetchNoPayload): Promise<T> {
+const DELETE = async <T>(props: FetchNoPayload): Promise<T> => {
   const fetchProps: FetchProps = {
     method: 'DELETE',
     url: props.url,

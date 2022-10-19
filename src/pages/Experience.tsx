@@ -23,14 +23,14 @@ export const Experience: React.FC = () => {
               fontWeight="bold"
             />
             <Flex id="experiences">
-              {content.experience.experiences.map(exp => (
+              {content.experience.experiences.map((exp, i) => (
                 <Company
                   company={exp.Company}
                   location={exp.Location}
                   occupation={exp.Occupation}
                   period={exp.Period}
                   description={exp.Description}
-                  key={exp.id}
+                  key={i}
                 />
               ))}
             </Flex>

@@ -163,7 +163,11 @@ export const TranslationProvider: React.FC<Props> = ({ children }) => {
     localStorage.setItem('lang', language)
   }, [language])
 
-  const content = language === 'en' ? enContents : ptBrContents
+  const [content, setContent] = useState(null)
+
+  setTimeout(() => {
+    setContent(language === 'en' ? enContents : ptBrContents)
+  }, 2000)
 
   const contextData: TranslationContextType = {
     language,

@@ -18,8 +18,8 @@ export const Skills: React.FC = () => {
           <Flex className="content subContent">
             <Text text={content.skills.title} fontSize={25} fontWeight="bold" />
             <Flex id="skills">
-              {content.skills.skillsList.map(skill => (
-                <Skill skill={skill.Skill} key={skill.id} />
+              {content.skills.skillsList.map((skill, i) => (
+                <Skill skill={skill.Skill} key={i} />
               ))}
             </Flex>
           </Flex>
