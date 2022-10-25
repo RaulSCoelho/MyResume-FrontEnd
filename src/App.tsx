@@ -10,15 +10,17 @@ import GlobalStyle from './styles/global'
 
 const App: React.FC = () => {
   return (
-    <AppContext>
-      <Box>
-        <BrowserRouter>
-          <Sidebar />
-          <Router />
-        </BrowserRouter>
-      </Box>
+    <>
+      <AppContext>
+        <Box>
+          <BrowserRouter>
+            <Sidebar />
+            <Router />
+          </BrowserRouter>
+        </Box>
+      </AppContext>
       <GlobalStyle />
-    </AppContext>
+    </>
   )
 }
 

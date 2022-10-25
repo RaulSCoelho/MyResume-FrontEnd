@@ -1,5 +1,6 @@
-import React, { useCallback, createContext, useEffect } from 'react'
+import React, { useCallback, createContext, useEffect, useState } from 'react'
 
+import { Loading } from 'components/Loading'
 import { DefaultTheme, ThemeProvider } from 'styled-components'
 
 import usePersistedState from '../hooks/usePersistedState'
@@ -9,6 +10,7 @@ import light from '../styles/themes/light'
 interface ThemeContextType {
   theme: DefaultTheme
   onToggleTheme: () => void
+  setIsLoading: (isLoading: boolean) => void
 }
 
 export const ThemeContext = createContext<ThemeContextType>(null)
@@ -19,6 +21,7 @@ interface Props {
 
 export const ThemesProvider: React.FC<Props> = ({ children }) => {
   const [theme, setTheme] = usePersistedState('theme', light)
+  const [isLoading, setIsLoading] = useState(true)
 
   const onToggleTheme = useCallback(() => {
     setTheme(state => (state.title === 'light' ? dark : light))
@@ -34,9 +37,12 @@ export const ThemesProvider: React.FC<Props> = ({ children }) => {
       value={{
         theme,
         onToggleTheme,
+        setIsLoading,
       }}
     >
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <Loading isLoading={isLoading}>{children}</Loading>
+      </ThemeProvider>
     </ThemeContext.Provider>
   )
 }

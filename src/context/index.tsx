@@ -11,13 +11,13 @@ interface Props {
 
 const AppContext: React.FC<Props> = ({ children }) => {
   return (
-    <UserProvider>
-      <TranslationProvider>
+    <ThemesProvider>
+      <UserProvider>
         <AuthProvider>
-          <ThemesProvider>{children}</ThemesProvider>
+          <TranslationProvider>{children}</TranslationProvider>
         </AuthProvider>
-      </TranslationProvider>
-    </UserProvider>
+      </UserProvider>
+    </ThemesProvider>
   )
 }
 
